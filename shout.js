@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-function shout(str) {
-    return str[0].toUpperCase() + str.slice(1) + '!!!';
+function repeatStr(times, str) {
+    if (times > 0) {
+        return str.repeat(times);
+    } else {
+        return "";
+    }
 }
       
-console.log(shout('help me') === 'Help me!!!');
-console.log(shout('i like you') === 'I like you!!!');
-console.log(shout('you are crazy') === 'You are crazy!!!');
-=======
-// Shout
-
-function shout(str) {
-    return str[0].toUpperCase() + str.slice(1) + '!!!';
-}
-      
-console.log(shout('help me') === 'Help me!!!');
-console.log(shout('i like you') === 'I like you!!!');
-console.log(shout('you are crazy') === 'You are crazy!!!');
->>>>>>> 99e7f2c80bca441ccb978e8acaafaff5a984dd35
+console.log(repeatStr(2, 'Hello') === 'Hello Hello');
+console.log(repeatStr(3, 'i like you') === 'i like you i like you i like you');
+console.log(repeatStr(9, 'ahah') === 'ahah ahah ahah ahah ahah ahah ahah ahah ahah');
