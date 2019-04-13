@@ -1,11 +1,7 @@
-function repeatStr(times, str) {
-    if (times > 0) {
-        return str.repeat(times);
-    } else {
-        return "";
-    }
+function shout(str) {
+    return str[0].toUpperCase() + str.slice(1) + '!!!';
 }
       
-console.log(repeatStr(2, 'Hello') === 'Hello Hello');
-console.log(repeatStr(3, 'i like you') === 'i like you i like you i like you');
-console.log(repeatStr(9, 'ahah') === 'ahah ahah ahah ahah ahah ahah ahah ahah ahah');
+console.log(shout('help me') === 'Help me!!!');
+console.log(shout('i like you') === 'I like you!!!');
+console.log(shout('you are crazy') === 'You are crazy!!!');
