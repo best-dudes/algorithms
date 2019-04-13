@@ -1,11 +1,13 @@
 // repeatStr
 
 function repeatStr(times, str) {
-    if (times > 0) {
-        return str.repeat(times);
-    } else {
-        return "";
-    }
+	var repeatedString = '';
+	
+	for (var i = 0; i < times; i++) {
+	
+		repeatedString += str;
+	} 	
+	return repeatedString;
 }
       
 console.log(repeatStr(2, 'Hello') === 'Hello Hello');
