@@ -2,12 +2,13 @@
 
 function repeatStr(times, str) {
 	var repeatedString = '';
+
 	
 	for (var i = 0; i < times; i++) {
 	
-		repeatedString += str;
+		repeatedString += str + ' ';
 	} 	
-	return repeatedString;
+	return repeatedString.trimEnd();
 }
       
 console.log(repeatStr(2, 'Hello') === 'Hello Hello');
