@@ -7,7 +7,11 @@
 // 1.1: true
 
 function hasFraction(n) {
-return Number.isInteger(n);
+  if (Number.isInteger(n)) {
+    return false;
+  } else {
+    return true;
+}
 }
 
 console.log(hasFraction(0) === false);
