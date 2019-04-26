@@ -10,8 +10,12 @@
 // A: A
 
 function getMiddleCharacter(n) {
+if (n.length % 2 === 1) {
+	n.length - ((n.length -1)/2);
+	return n.charAt(n);
+} else {
+	
 }
-
 
 console.log(getMiddleCharacter('test') === 'es');
 console.log(getMiddleCharacter('testing') === 't');
