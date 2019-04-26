@@ -14,7 +14,7 @@ if (n.length % 2 === 1) {
 	n.length - ((n.length -1)/2);
 	return n.charAt(n);
 } else {
-	
+	return n[(n.length/2) - 1] + n[(n.length/2)] ;
 }
 
 console.log(getMiddleCharacter('test') === 'es');
