@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
+  
+  <button onclick="myFunction()">add</button>
 
-<button onclick="myFunction()">Click me</button>
-
-<p id="demo"></p>
+<div id="demo"></div>
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
+  var inc = 0;
+  function myFunction() {
+    inc = inc + 1;
+    document.getElementById("demo").innerHTML = inc;
+   }
 </script>
 
 </body>
