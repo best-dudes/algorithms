@@ -2,16 +2,16 @@
 <html>
 <body>
   
-  <button onclick="myFunction()">add</button>
+<div id = 'demo'></div>
+<label>Your Name <input type="text"  id = 'inputText'><button onclick = ' myFunction() '> Say Hello </button></label>
 
-<div id="demo"></div>
 
 <script>
-  var inc = 0;
-  function myFunction() {
-    inc = inc + 1;
-    document.getElementById("demo").innerHTML = inc;
-   }
+
+function myFunction() {
+  document.getElementById('demo').innerHTML = 'Hello, ' + document.getElementById('inputText').value;
+}
+
 </script>
 
 </body>
