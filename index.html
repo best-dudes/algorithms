@@ -2,15 +2,30 @@
 <html>
 <body>
   
-<div id = 'demo'></div>
-<label>Your Name <input type="text"  id = 'inputText'><button onclick = ' myFunction() '> Say Hello </button></label>
+<button>Click me</button>
 
+<style>
+
+  button {
+  width: 200px;
+  height: 200px;
+  background: red;
+  border-color:transparent;
+  margin-top:10%;
+  margin-left: 45%;
+  color:white;
+  font-size:40px;
+}
+
+</style>
 
 <script>
 
-function myFunction() {
-  document.getElementById('demo').innerHTML = 'Hello, ' + document.getElementById('inputText').value;
-}
+var button = document.querySelector('button');
+
+button.onclick = function () {
+  this.style.backgroundColor = '#05ffb0';
+};
 
 </script>
 
