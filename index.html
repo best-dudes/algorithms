@@ -2,19 +2,19 @@
 <html>
 <body>
   
-<button>Click me</button>
-
-<style>
-
+  <button>Click me</button>
+  
+  <style>
+  
   button {
-  width: 200px;
-  height: 200px;
-  background: red;
-  border-color:transparent;
-  margin-top:10%;
-  margin-left: 45%;
-  color:white;
-  font-size:40px;
+    
+    background: red;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-color:transparent;
+    color:white;
+    font-size:40px;
 }
 
 </style>
@@ -24,8 +24,20 @@
 var button = document.querySelector('button');
 
 button.onclick = function () {
-  this.style.backgroundColor = '#1E90FF';
-};
+ this.style.backgroundColor = '#1E90FF';
+   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 1000) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      button .style.left = pos + 'px'; 
+    }
+  }
+};  
+
 
 </script>
 
