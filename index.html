@@ -23,23 +23,34 @@
 
 var button = document.querySelector('button');
 
-button.onclick = function () {
- this.style.backgroundColor = '#1E90FF';
-   
-  var pos = 0;
-  var id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 1000) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      button .style.left = pos + 'px'; 
-    }
-  }
-};  
+button.onclick = function() {
+  animate(function(timePassed) {
+        button.style.left = timePassed / 5 + 'px';
+      }, 5000);
+    };
+    
+    function animate(draw, duration) {
+      var start = performance.now();
+      
+      requestAnimationFrame(function animate(time) {
+        var timePassed = time - start;
+        
+        console.log(time, start)
+        
+        if (timePassed > duration) timePassed = duration;
+        
+        draw(timePassed);
+        
+        if (timePassed < duration) {
+          requestAnimationFrame(animate);
+        }
+        });
+        }
 
 
 </script>
 
 </body>
 </html>
+
+
